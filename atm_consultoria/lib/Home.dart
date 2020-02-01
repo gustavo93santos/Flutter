@@ -18,6 +18,7 @@ class _HomeState extends State<Home> {
         padding: EdgeInsets.all(32),
         child: Column(
           children: <Widget>[
+
             RaisedButton(
               child: Text(
                 "Segunda Tela",
@@ -30,7 +31,8 @@ class _HomeState extends State<Home> {
                   )
                 );
               }
-            )
+            ),
+
           ],
         ),
       ),
