@@ -1,4 +1,3 @@
-import 'package:atm_consultoria/TelaSecundaria.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -10,32 +9,64 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Tela Principal"),
-        backgroundColor: Colors.amber,
+        title: Text(
+          "ATM Consultoria",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.green,
       ),
       body: Container(
-        padding: EdgeInsets.all(32),
+        padding: EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
 
-            RaisedButton(
-              child: Text(
-                "Segunda Tela",
+            Image.asset(
+              "images/logo.png",
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(32),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: (){},
+                    child: Image.asset("images/menu_empresa.png"),
+                  ),
+                  GestureDetector(
+                    onTap: (){},
+                    child: Image.asset("images/menu_servico.png"),
+                  ),
+                ],
               ),
-              onPressed: (){
-                Navigator.push(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (context) => TelaSecundaria()
-                  )
-                );
-              }
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(32),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: (){},
+                    child: Image.asset("images/menu_cliente.png"),
+                  ),
+                  GestureDetector(
+                    onTap: (){},
+                    child: Image.asset("images/menu_contato.png"),
+                  ),
+                ],
+              ),
             ),
 
           ],
         ),
-      ),
+      )
     );
   }
 }
