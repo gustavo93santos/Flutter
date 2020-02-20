@@ -12,10 +12,6 @@ class Resultado extends StatefulWidget {
 
 class _ResultadoState extends State<Resultado> {
 
-  void _voltar(){
-    
-  }
-
   @override
   Widget build(BuildContext context) {
 
